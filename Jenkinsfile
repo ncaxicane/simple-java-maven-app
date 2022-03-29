@@ -1,15 +1,14 @@
 pipeline {
-  agent none
-  stages {
-    stage('Take the grafana backup') {
-      steps {
-        sh 'am a file'
-      }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
     }
-    stage('Push to the grafana-backup submodule repository') {
-      steps {
-        sh 'finished run'
-      }
-    }
-  }
 }
