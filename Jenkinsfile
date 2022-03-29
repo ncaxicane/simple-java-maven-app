@@ -1,8 +1,6 @@
 pipeline {
   agent {
-    node {
-      any
-    }
+  
   }
   stages {
     stage('Take the grafana backup') {
