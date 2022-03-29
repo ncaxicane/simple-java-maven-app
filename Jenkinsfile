@@ -10,6 +10,12 @@ pipeline {
                 '''
                 
            sh 'git reset --hard'
+                   
+                 sh '''
+                    echo "I deleted everything"
+                    ls -lah
+                '''
+                
     sh 'git clean -f -d'
     sh 'git submodule foreach --recursive git reset --hard'
     sh 'git submodule update -f --init --recursive'
