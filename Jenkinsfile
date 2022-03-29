@@ -8,6 +8,12 @@ pipeline {
                     echo "Multiline shell steps works too"
                     ls -lah
                 '''
+                  sh 'git submodule foreach --recursive git reset --hard'  
+                
+                 sh '''
+                    echo "I deleted everything"
+                    ls -lah
+                '''
             }
         }
     }
