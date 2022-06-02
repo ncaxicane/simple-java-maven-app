@@ -1,7 +1,7 @@
 @Library(['DBBE@aws_master']) _
 
 pipeline {
-agent { label 'linux-node1' }
+agent { label 'linux' }
 options {
 disableConcurrentBuilds()
 skipDefaultCheckout true
